@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 // import 'package:weather_app/models/weather_forecast_daily.dart';
 import 'package:manga_reader/model/manga_model.dart';
@@ -18,7 +17,7 @@ class MangaApi {
 
        var response = await http.get(uri);
 
-    print('response: ${response.body}');
+    
 
     if (response.statusCode == 200) {
       return MangaModel.fromJson(json.decode(response.body));
